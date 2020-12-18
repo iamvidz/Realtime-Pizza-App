@@ -3,3 +3,13 @@ create directory structure
 >npm install express ejs express-ejs-layouts
 >npm install nodemon -D
 create express server - server.js file
+install git
+>git config --global user.email vim7127@gmail.com
+>git config --global user.name iamvidz
+>git init
+>git status
+create .gitignore
+>git add .
+>git commit -m 'initial'
+>npm install laravel-mix --save-dev
+>cp node_modules/laravel-mix/setup/webpack.mix.js ./
