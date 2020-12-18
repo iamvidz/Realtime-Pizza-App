@@ -1,0 +1,5 @@
+>npm init
+create directory structure
+>npm install express ejs express-ejs-layouts
+>npm install nodemon -D
+create express server - server.js file
