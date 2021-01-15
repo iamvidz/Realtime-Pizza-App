@@ -13,3 +13,13 @@ create .gitignore
 >git commit -m 'initial'
 >npm install laravel-mix --save-dev
 >cp node_modules/laravel-mix/setup/webpack.mix.js ./
+add tailwind css cdn link
+google fonts Lato 
+static home page 
+favicon.ico 
+Views- Customer cart route
+Views- auth login, register routes
+login,register page - tailwind css form component 
+    https://tailwindui.com/preview
+
+
