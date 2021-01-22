@@ -18,8 +18,18 @@ google fonts Lato
 static home page 
 favicon.ico 
 Views- Customer cart route
+-empty cart page
+-order summary
 Views- auth login, register routes
 login,register page - tailwind css form component 
     https://tailwindui.com/preview
 
+move routes to routes file
+dedicated controllers - home,auth,cart
 
+Mongodb - connect through mongoose
+>npm install mongoose
+Database Connection - server.js
+
+Models - Menu schema,(menu.js)
+fetching menu from database (homeController)
