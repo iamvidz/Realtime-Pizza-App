@@ -33,3 +33,19 @@ Database Connection - server.js
 
 Models - Menu schema,(menu.js)
 fetching menu from database (homeController)
+
+Session: 
+>npm install express-session
+>npm install dotenv
+>npm install express-flash
+>npm install connect-mongo
+store session to 'sessions' collection
+
+add to cart - app.js
+>npm install axios
+update cart route
+
+to notify when adding item to cart
+>npm install noty => https://ned.im/noty/#/
+save cart items in session
+display items in cart after adding
