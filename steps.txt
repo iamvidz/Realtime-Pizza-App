@@ -49,3 +49,14 @@ to notify when adding item to cart
 >npm install noty => https://ned.im/noty/#/
 save cart items in session
 display items in cart after adding
+
+Authentication:
+register 
+validations
+error messages displayed using express-flash
+for password hashing
+>npm install bcrypt 
+
+login:
+http://www.passportjs.org/
+>npm install passport passport-local

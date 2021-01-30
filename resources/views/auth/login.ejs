@@ -13,8 +13,14 @@
         </div>-->
     <div class="bg-indigo-200 pt-8 pb-8">
       <div class="text-xl text-center text-gray-600 mb-6">Log In </div>
-      <form action="">
+      <form action="/login" method="POST">
         <div class="w-4/5 mx-auto">
+          <% if(messages.error) { %>
+            <span class="text-red-800 text-sm">
+              <%= messages.error %>
+            </span>
+            <br><br>
+            <% } %>
           <div class="flex items-center bg-white rounded shadow-md mb-4">
             <span class="px-3">
               <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
