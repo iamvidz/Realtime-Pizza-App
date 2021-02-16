@@ -24,11 +24,13 @@
                             <span class="text-lg font-bold">Total amount:</span>
                             <span class="amount font-bold text-2xl ml-2">₹<%= session.cart.totalPrice %></span>
                         </div>
+
+                        <% if(user) { %>
                         <div>
-                            <form action="" class="mt-12">
-                                <input type="text" class="border border-gray-400 p-2 w-1/2 mb-4"
+                            <form action="/orders" method="POST" class="mt-12">
+                                <input name="phone" type="text" class="border border-gray-400 p-2 w-1/2 mb-4"
                                     placeholder="Phone number">
-                                <input type="text" class="border border-gray-400 p-2 w-1/2" placeholder="Address">
+                                <input name="address" type="text" class="border border-gray-400 p-2 w-1/2" placeholder="Address">
                                 <div>
                                     <button class="btn-primary px-6 py-2 rounded-full text-white mt-6 font-bold"
                                         type="submit">Order Now</button>
@@ -36,8 +38,9 @@
                                 </div>
                             </form>
                         </div>
-                        <!--<a href="" class="inline-block cursor-pointer btn-primary px-6 py-2 rounded-full text-white mt-6 font-bold">Login to continue</a>
-                -->
+                        <% } else { %>
+                        <a href="/login" class="inline-block cursor-pointer btn-primary px-6 py-2 rounded-full text-white mt-6 font-bold">Login to continue</a>
+                        <% } %>
                     </div>
         </div>
     </div>

@@ -60,3 +60,9 @@ for password hashing
 login:
 http://www.passportjs.org/
 >npm install passport passport-local
+
+Order management
+>npm install moment (for time format)
+order views and routes for customer and admin
+Place order functionality
+show all orders to customer and admin
