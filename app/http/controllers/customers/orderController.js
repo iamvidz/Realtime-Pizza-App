@@ -34,6 +34,16 @@ function orderController(){
             res.header('cache-Control', 'no-cache,private,no-store,must-revalidate,max-scale=0,post-check=0,pre-check=0')
             res.render('customers/orders', {orders: orders, moment: moment})
             //console.log(orders)
+        },
+        async show(req,res){
+            const order= await Order.findById(req.params.id)
+
+            //Authorize user
+            if(req.user._id.toString() === order.customerId.toString()){
+                return res.render('customers/singleOrder', {order})
+            }
+            return res.redirect('/')
+
         }
     }
 }

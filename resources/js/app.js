@@ -1,6 +1,7 @@
 import axios from 'axios'
 import Noty from 'noty'
 import { initAdmin } from './admin'
+import moment from 'moment'
 
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter = document.querySelector('#cartCounter')
@@ -44,3 +45,36 @@ if(alertMsg){
 }
 
 initAdmin()
+
+//render updated status
+let hiddenInput = document.querySelector('#hiddenInput')
+let order = hiddenInput ? hiddenInput.value : null
+
+order = JSON.parse(order)
+//console.log(order)
+
+let allstatus = document.querySelectorAll('.status_line')
+//console.log(allstatus)
+
+let time = document.createElement('small')
+
+
+function updateStatus(order){
+    let stepCompleted = true;
+    allstatus.forEach((status)=>{
+        let dataProp = status.dataset.status
+        if(stepCompleted){
+            status.classList.add('step-completed')
+        }
+        if(dataProp === order.status){
+            stepCompleted = false
+            time.innerText = moment(order.updatedAt).format('hh:mm A')
+            status.appendChild(time)
+            if(status.nextElementSibling){
+                status.nextElementSibling.classList.add('current')
+            }
+        }
+    })
+}
+
+updateStatus(order)

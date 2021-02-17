@@ -66,3 +66,9 @@ Order management
 order views and routes for customer and admin
 Place order functionality
 show all orders to customer and admin
+
+update order status
+dynamic route for single order
+display single order status
+line awesome for icons- https://icons8.com/line-awesome
+rendering updated status
