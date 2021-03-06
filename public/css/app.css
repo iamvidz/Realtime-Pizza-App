@@ -358,6 +358,7 @@ section.hero {
 
 .btn-primary:hover {
   background: #b23301;
+  outline: none;
 }
 
 section.cart {
@@ -368,20 +369,17 @@ section.cart .amount {
   color: #FE5F1E;
 }
 
-.svg-icon {
-  width: 1em;
-  height: 1em;
+section.login {
+  background: #F8F8F8;
+  min-height: calc(100vh - 86px);
 }
 
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #4691f6;
+section.login a {
+  color: #FE5F1E;
 }
 
-.svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
+section.login a:hover {
+  color: #b23301;
 }
 
 .noty_theme__mint {
@@ -395,7 +393,7 @@ a.link {
 
 section.status {
   background: #F8F8F8;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 86px);
 }
 
 .status-box {
@@ -403,24 +401,24 @@ section.status {
 }
 
 .status-box ul {
-  margin-left: 82px;
+  margin-left: 84px;
 }
 
 .status-box ul li span {
   position: relative;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 
 .status-box ul li span:after {
   content: "";
   position: absolute;
-  left: 0;
+  left: -10px;
   top: 50%;
   background: #232323;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  transform: translateY(-5px);
+  transform: translateY(-50%);
   box-shadow: 0 0 1px 10px #F8F8F8;
 }
 
@@ -429,7 +427,9 @@ section.status {
   font-size: 46px;
   font-weight: 600;
   position: absolute;
-  left: -80px;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-50%);
   color: inherit;
 }
 
@@ -461,7 +461,7 @@ section.status {
   content: "";
   position: absolute;
   top: 0;
-  left: 4px;
+  left: -6px;
   width: 2px;
   height: 100%;
   background: #232323;
@@ -495,5 +495,49 @@ section.status {
 .status-box ul li small {
   float: right;
   font-size: 14px;
+  margin-top: 8px;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+  }
+}
+
+.StripeElement {
+  box-sizing: border-box;
+  width: 50%;
+  margin-left: auto;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
 }
 

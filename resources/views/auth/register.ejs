@@ -1,78 +1,77 @@
 <section class="login">
-  <div class="bg-gray-100 min-h-full py-8">
-    <div class="max-w-sm mx-auto bg-white shadow-xl rounded my-8">
+    <div class="bg-gray-100 min-h-full py-8">
+        <div class="max-w-sm mx-auto bg-white shadow-xl rounded my-8">
 
-      <div class="bg-indigo-200 pt-8 pb-8">
-        <div class="text-xl text-center text-gray-600 mb-6">Sign Up</div>
-        <form action="/register" method="POST">
+            <div class="bg-indigo-200 pt-8 pb-8">
+                <div class="text-xl text-center text-gray-800 mb-6">Sign Up</div>
+                <form action="/register" method="POST">
+                    <div class="w-4/5 mx-auto">
+                        <% if(messages.error) { %>
+                            <span class="text-red-800 text-sm">
+                                <%= messages.error %>
+                            </span>
+                            <br><br>
+                            <% } %>
 
-          <div class="w-4/5 mx-auto">
-            <% if(messages.error) { %>
-              <span class="text-red-800 text-sm">
-                <%= messages.error %>
-              </span>
-              <br><br>
-              <% } %>
-                <div class="flex items-center bg-white rounded shadow-md mb-4">
+                                <div class="flex items-center bg-white rounded shadow-md mb-4">
 
-                  <span class="px-3">
-                    <svg class="fill-current text-gray-500 w-4 h-4" viewBox="0 0 32 32">
-                      <path
-                        d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z">
-                      </path>
-                    </svg>
-                  </span>
-                  <input value="<%= messages.name %>" class="w-full h-12 focus:outline-none" type="text" name="name" placeholder="Name">
-                </div>
-                <div class="flex items-center bg-white rounded shadow-md mb-4">
-                  <span class="px-3">
-                    <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20">
-                      <path
-                        d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z" />
-                    </svg>
-                  </span>
-                  <input value="<%= messages.email %>" class="w-full h-12 focus:outline-none" type="email" name="email" placeholder="Email">
-                </div>
-                <div class="flex items-center bg-white rounded shadow-md mb-4">
-                  <span class="px-3">
-                    <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20">
-                      <path
-                        d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-                    </svg>
-                  </span>
-                  <input class="w-full h-12 focus:outline-none" type="password" name="password" placeholder="Password">
-                </div>
-                <div class="flex items-center bg-white rounded shadow-md mb-4">
-                  <span class="px-3">
-                    <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20">
-                      <path
-                        d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-                    </svg>
-                  </span>
-                  <input class="w-full h-12 focus:outline-none" type="password" name="confirmpassword"
-                    placeholder="Confirm Password">
-                </div>
+                                    <span class="px-3">
+                                        <svg class="fill-current text-gray-500 w-4 h-4" viewBox="0 0 32 32">
+                                            <path
+                                                d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <input value="<%= messages.name %>" class="w-full h-12 focus:outline-none"
+                                        type="text" name="name" placeholder="Name">
+                                </div>
+                                <div class="flex items-center bg-white rounded shadow-md mb-4">
+                                    <span class="px-3">
+                                        <svg class="fill-current text-gray-500 w-4 h-4"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z" />
+                                        </svg>
+                                    </span>
+                                    <input value="<%= messages.email %>" class="w-full h-12 focus:outline-none"
+                                        type="email" name="email" placeholder="Email">
+                                </div>
+                                <div class="flex items-center bg-white rounded shadow-md mb-4">
+                                    <span class="px-3">
+                                        <svg class="fill-current text-gray-500 w-4 h-4"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
+                                        </svg>
+                                    </span>
+                                    <input class="w-full h-12 focus:outline-none" type="password" name="password"
+                                        placeholder="Password">
+                                </div>
+                                <div class="flex items-center bg-white rounded shadow-md mb-4">
+                                    <span class="px-3">
+                                        <svg class="fill-current text-gray-500 w-4 h-4"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
+                                        </svg>
+                                    </span>
+                                    <input class="w-full h-12 focus:outline-none" type="password" name="confirmpassword"
+                                        placeholder="Confirm Password">
+                                </div>
+                                
 
-                <!--<div class="mb-4">
-              <input type="checkbox" name="remember" class="mr-1">
-              <label for="remember" class="text-sm text-gray-600">Remember me</label>
-            </div>-->
-                <div class="flex items-center justify-between">
-                  <button type="submit"
-                    class="btn-primary block text-white text-sm uppercase rounded-full shadow-md px-6 py-2">Sign
-                    Up</button>
-                  <a href="/login" class=" hover:text-red-400">
-                    Already have an account?
-                  </a>
-                </div>
-          </div>
-        </form>
-      </div>
+                                <div class="flex items-center justify-between">
+                                    <button type="submit"
+                                        class="btn-primary block text-white text-sm uppercase rounded-full shadow-md px-6 py-2">Sign
+                                        Up</button>
+                                    <a href="/login" class=" hover:text-red-400">
+                                        Already have an account?
+                                    </a>
+                                </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="text-sm text-center text-gray-400">&copy;2021 Vidhi&Harsh. All rights reserved.</div>
     </div>
-    <div class="text-sm text-center text-gray-400">&copy;2021 Vidhi&Harsh. All rights reserved.</div>
-  </div>
-
 </section>
