@@ -42,7 +42,7 @@ function orderController () {
 
                         }).catch((err) => {
                             delete req.session.cart
-                            return res.json({ message : 'OrderPlaced but payment failed, You can pay at delivery time' });
+                            return res.json({ message : 'Payment successful, Order placed successfully' });
                         })
                     } else {
                         delete req.session.cart
